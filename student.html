@@ -9,30 +9,65 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            overflow: hidden;
+            animation: typing 5s steps(40) forwards, book 8s infinite alternate;
         }
         h1 {
             text-align: center;
             color: black;
         }
         p {
-            color: black;
             text-align: justify;
             margin-bottom: 20px;
+            margin-top: 20px;
+            animation: typing 5s steps(40) forwards;
+            color: black;
         }
         .source-link {
             display: block;
             text-align: center;
         }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes book {
+            0% {
+                transform: perspective(400px) rotateY(0);
+                transform-origin: left;
+            }
+            100% {
+                transform: perspective(400px) rotateY(-20deg);
+                transform-origin: left;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Rizal as a Student</h1>
-    <p>Rizal, at the age of 9, first started his studies in Biñan, a town where his father was born. His first classroom was located in his schoolmaster's own house. As he entered the room, he was asked if he spoke Spanish and knew Latin. His lack of knowledge was the cause of him being made fun of by his classmates. Although he had a reputation for being a good boy in school, he also had times when he got into fights with his classmates. But despite all that, Rizal mentioned that he used to win competitions during that time. It was also the same time when an interest in art sparked in him, and his schoolmates branded him as one of the class painters.</p>
-    
-    <p>In the year 1872, at the age of 11, he entered Ateneo Municipal de Manila. At first, he was not supposed to be admitted for being late and was seen as very small for his age. However, he was still admitted. In their college, they are divided into two groups called "empires" which are always at war. These empires are led by leaders called "emperors" who win this spot basically by being the best in terms of standing and work contribution. Rizal was put at the end of the line. Even so, he allotted time to study at Santa Isabel College, and he ranked up in the class, making him an emperor after a month. He also received different awards during his time at Ateneo Municipal such as prizes during quarterly examinations, medals, and a grade of "Excellent". He received the Bachelor of Arts (B.A.) degree, with highest honors, from Ateneo de Manila.</p>
-    
-    <p>Despite his mother's disapproval of his continuation of studies, Rizal entered the University of Sto. Tomas in 1877. His father wanted him to study Metaphysics. Although it was not his preference, he took up Metaphysics, History of Philosophy, and Theodicy for his first year. In the same year, he submitted his poem entitled "A La Juventud Filipina" in a contest held by Liceo Artistico Literario de Manila with the theme “Crece, o timida flor” (Grow, O Timid Flower). This was a win for Rizal since it was the start where he showed people that the "indios" they referred to were more than what they perceived them to be. He was also active in extracurricular activities during his time in UST. He became the president of the Academy of Spanish Literature and the secretary of the Academy of Natural Sciences and Marian Congregation. In his second year, he pursued medicine due to his mother's condition and completed his studies in this field.</p>
+    <div class="container">
+        <h1>Rizal as a Student</h1>
+        <p>Rizal, at the age of 9, first started his studies in Biñan, a town where his father was born. His first classroom was located in his schoolmaster's own house. As he entered the room, he was asked if he spoke Spanish and knew Latin. His lack of knowledge was the cause of him being made fun of by his classmates. Although he had a reputation for being a good boy in school, he also had times when he got into fights with his classmates. But despite all that, Rizal mentioned that he used to win competitions during that time. It was also the same time when an interest in art sparked in him, and his schoolmates branded him as one of the class painters.</p>
+        
+        <p>In the year 1872, at the age of 11, he entered Ateneo Municipal de Manila. At first, he was not supposed to be admitted for being late and was seen as very small for his age. However, he was still admitted. In their college, they are divided into two groups called "empires" which are always at war. These empires are led by leaders called "emperors" who win this spot basically by being the best in terms of standing and work contribution. Rizal was put at the end of the line. Even so, he allotted time to study at Santa Isabel College, and he ranked up in the class, making him an emperor after a month. He also received different awards during his time at Ateneo Municipal such as prizes during quarterly examinations, medals, and a grade of "Excellent". He received the Bachelor of Arts (B.A.) degree, with highest honors, from Ateneo de Manila.</p>
+        
+        <p>Despite his mother's disapproval of his continuation of studies, Rizal entered the University of Sto. Tomas in 1877. His father wanted him to study Metaphysics. Although it was not his preference, he took up Metaphysics, History of Philosophy, and Theodicy for his first year. In the same year, he submitted his poem entitled "A La Juventud Filipina" in a contest held by Liceo Artistico Literario de Manila with the theme “Crece, o timida flor” (Grow, O Timid Flower). This was a win for Rizal since it was the start where he showed people that the "indios" they referred to were more than what they perceived them to be. He was also active in extracurricular activities during his time in UST. He became the president of the Academy of Spanish Literature and the secretary of the Academy of Natural Sciences and Marian Congregation. In his second year, he pursued medicine due to his mother's condition and completed his studies in this field.</p>
 
-    <p><a href="https://www.gutenberg.org/files/48438/48438-h/48438-h.htm" target="_blank">Source</a></p>
+        <p><a href="https://www.gutenberg.org/files/48438/48438-h/48438-h.htm" target="_blank" class="source-link">Source</a></p>
+    </div>
 </body>
 </html>
