@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('rizalbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    color: white;
+}
+.blackBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.75;
+    z-index: -1;
+}
+.wrapper h1 {
+    font-size: 3em;
+    margin: 0.3em ;
+    text-align: center;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 50%; 
+    margin-right: auto;
+}
+.carousel-container {
+    position: relative;
+    font-size: large;
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+.carousel-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carousel-item {
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    display: none;
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+.carousel-item.active {
+    display: block;
+    color: #FFD700;
+}
+.carousel-item:hover {
+    transform: scale(1.1);
+    color: #FFD700;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #FFD700;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    height: 70%; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.popup button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.popup button:hover {
+    background-color: #FFC107;
+}
+h1:not(.wrapper h1) {
+    text-align: center;
+    color: black;
+}
+h2, h3, h4, h5, strong {
+    color: black;
+}
+li, a {
+    color: black;
+    text-align: justify;
+}
+p {
+    color: black;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.source-link {
+    display: block;
+    text-align: center;
+}
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-container {
+    width: 90%;
+    }
+}

@@ -3,157 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>Rizal as a...</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-image: url('assets/rizalbg.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: #000000;
-      color: white;
-    }
-    .blackBG {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #000000;
-      opacity: 0.75;
-      z-index: -1;
-    }
-    h1 {
-      font-size: 3em;
-      margin: 0.5em 0;
-      text-align: center;
-    }
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-	  margin-left: 50%; 
-	  margin-right: auto;
-    }
-    .carousel-container {
-      position: relative;
-      width: 80%;
-      max-width: 400px;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
-      overflow: hidden;
-    }
-    .carousel-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .carousel-item {
-      cursor: pointer;
-      transition: transform 0.3s, color 0.3s;
-      display: none;
-      font-size: 1.5em;
-      padding: 10px 0;
-    }
-    .carousel-item.active {
-      display: block;
-      color: #FFD700;
-    }
-    .carousel-item:hover {
-      transform: scale(1.1);
-      color: #FFD700;
-    }
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 30px;
-      color: #FFD700;
-      transition: opacity 0.3s;
-      z-index: 1;
-    }
-    .prev {
-      left: 10px;
-    }
-    .next {
-      right: 10px;
-    }
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    .popup {
-      background-color: #ffffff;
-      width: 80%;
-      height: auto;
-      max-width: 600px;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      text-align: center;
-      animation: fadeIn 0.5s ease-in-out;
-      height: 70%; /* Adjust the height as needed */
-      overflow-y: auto; /* Enable vertical scrolling */
-    }
-    .popup button {
-      background-color: #FFD700;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 20px;
-      font-size: 1em;
-      color: #000;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .popup button:hover {
-      background-color: #FFC107;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      .carousel-container {
-        width: 90%;
-      }
-    }
-  </style>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <div class="blackBG"></div>
   <div class="wrapper">
-    <h1>Rizal as a ...</h1>
+    <h1>Rizal as</h1>
     <div class="carousel-container">
       <div class="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-link="child.html">Child</div>
-          <div class="carousel-item" data-link="student.html">Student</div>
-          <div class="carousel-item" data-link="lover.html">Lover</div>
-          <div class="carousel-item" data-link="poet.html">Poet</div>
-          <div class="carousel-item" data-link="hero.html">Hero</div>
+          <div class="carousel-item active" data-link="child.html">a child</div>
+          <div class="carousel-item" data-link="student.html">a student</div>
+          <div class="carousel-item" data-link="artist.html">an artist</div>
+          <div class="carousel-item" data-link="lover.html">a lover</div>
+          <div class="carousel-item" data-link="poet.html">a poet</div>
+          <div class="carousel-item" data-link="hero.html">a hero</div>
         </div>
       </div>
       <a class="prev" onclick="prevItem()">&#10094;</a>
