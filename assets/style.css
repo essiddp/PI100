@@ -135,9 +135,41 @@ p {
     text-align: justify;
     margin-bottom: 20px;
 }
+.artwork p {
+    margin: 0;
+}
 .source-link {
     display: block;
     text-align: center;
+}
+.artwork {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.artwork img {
+    width: 50%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.artwork:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.artwork:nth-child(even) img {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.artwork div {
+    max-width: 70%;
+}
+.artwork:nth-child(even) div,
+.artwork:nth-child(even) p {
+    text-align: right;
+}
+.artwork:nth-child(odd) div,
+.artwork:nth-child(odd) p {
+    text-align: left;
 }
 @keyframes fadeIn {
     from {
@@ -147,7 +179,6 @@ p {
     opacity: 1;
     }
 }
-
 @media screen and (max-width: 768px) {
     .carousel-container {
     width: 90%;
