@@ -153,6 +153,7 @@ p {
     margin-right: 20px;
     border-radius: 10px;
 }
+
 .artwork:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -170,6 +171,12 @@ p {
 .artwork:nth-child(odd) div,
 .artwork:nth-child(odd) p {
     text-align: left;
+}
+figcaption{
+    color: black;
+    font-style: italic;
+    text-align: center;
+    font-size: 12px;
 }
 @keyframes fadeIn {
     from {
