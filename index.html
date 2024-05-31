@@ -3,108 +3,111 @@
 <head>
   <meta charset="utf-8">
   <title>Rizal as a...</title>
-    <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <div class="blackBG"></div>
-  <div class="wrapper">
-    <h1>Rizal as</h1>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-link="child.html">a child</div>
-          <div class="carousel-item" data-link="student.html">a student</div>
-          <div class="carousel-item" data-link="artist.html">an artist</div>
-          <div class="carousel-item" data-link="musician.html">a musician</div>
-          <div class="carousel-item" data-link="lover.html">a lover</div>
-          <div class="carousel-item" data-link="poet.html">a poet</div>
-          <div class="carousel-item" data-link="hero.html">a hero</div>
+  <div class="fullscreen-bg">
+    <div class="wrapper">
+      <div class="blackBG"></div>
+      <h1>Rizal as</h1>
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-link="child.html">a child</div>
+            <div class="carousel-item" data-link="student.html">a student</div>
+            <div class="carousel-item" data-link="artist.html">an artist</div>
+            <div class="carousel-item" data-link="musician.html">a musician</div>
+            <div class="carousel-item" data-link="lover.html">a lover</div>
+            <div class="carousel-item" data-link="poet.html">a poet</div>
+            <div class="carousel-item" data-link="hero.html">a hero</div>
+          </div>
         </div>
+        <a class="prev" onclick="prevItem()">&#10094;</a>
+        <a class="next" onclick="nextItem()">&#10095;</a>
       </div>
-      <a class="prev" onclick="prevItem()">&#10094;</a>
-      <a class="next" onclick="nextItem()">&#10095;</a>
     </div>
+  </div>
+
+  <div class="black-section">
   </div>
 
   <div class="overlay" id="overlay">
     <div class="popup" id="popup">
-      <div id="popupContent">
-      </div>
+      <div id="popupContent"></div>
       <button onclick="closePopup()">Close</button>
     </div>
   </div>
 
-<script>
-  let items = document.querySelectorAll('.carousel-item');
-  let currentItem = 0;
-  const overlay = document.getElementById('overlay');
-  const popupContent = document.getElementById('popupContent');
+  <script>
+    let items = document.querySelectorAll('.carousel-item');
+    let currentItem = 0;
+    const overlay = document.getElementById('overlay');
+    const popupContent = document.getElementById('popupContent');
 
-  function nextItem() {
-    items[currentItem].classList.remove('active');
-    currentItem = (currentItem + 1) % items.length;
-    items[currentItem].classList.add('active');
-  }
-
-  function prevItem() {
-    items[currentItem].classList.remove('active');
-    currentItem = (currentItem - 1 + items.length) % items.length;
-    items[currentItem].classList.add('active');
-  }
-
-  function openPopup(link) {
-    console.log('Opening popup with link:', link); 
-    fetch(link)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.text();
-      })
-      .then(data => {
-        console.log('Popup data:', data);
-        popupContent.innerHTML = data;
-        overlay.style.display = 'flex';
-      })
-      .catch(error => {
-        console.error('Error fetching popup content:', error);
-        popupContent.innerHTML = '<p>Sorry, content could not be loaded.</p>';
-        overlay.style.display ='flex';
-      });
-  }
-
-  function closePopup() {
-    overlay.style.display = 'none';
-    popupContent.innerHTML = '';
-  }
-
-  overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) {
-      closePopup();
+    function nextItem() {
+      items[currentItem].classList.remove('active');
+      currentItem = (currentItem + 1) % items.length;
+      items[currentItem].classList.add('active');
     }
-  });
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowLeft') {
-      prevItem();
-    } else if (event.key === 'ArrowRight') {
-      nextItem();
+    function prevItem() {
+      items[currentItem].classList.remove('active');
+      currentItem = (currentItem - 1 + items.length) % items.length;
+      items[currentItem].classList.add('active');
     }
-  });
 
-  items.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      currentItem = index;
-      const link = item.getAttribute('data-link');
-      if (link) {
-        openPopup(link);
+    function openPopup(link) {
+      console.log('Opening popup with link:', link);
+      fetch(link)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then(data => {
+          console.log('Popup data:', data);
+          popupContent.innerHTML = data;
+          overlay.style.display = 'flex';
+        })
+        .catch(error => {
+          console.error('Error fetching popup content:', error);
+          popupContent.innerHTML = '<p>Sorry, content could not be loaded.</p>';
+          overlay.style.display = 'flex';
+        });
+    }
+
+    function closePopup() {
+      overlay.style.display = 'none';
+      popupContent.innerHTML = '';
+    }
+
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        closePopup();
       }
     });
-  });
 
-  items[currentItem].classList.add('active');
-</script>
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        prevItem();
+      } else if (event.key === 'ArrowRight') {
+        nextItem();
+      }
+    });
+
+    items.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        currentItem = index;
+        const link = item.getAttribute('data-link');
+        if (link) {
+          openPopup(link);
+        }
+      });
+    });
+
+    items[currentItem].classList.add('active');
+  </script>
 
 </body>
 </html>
-
