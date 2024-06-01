@@ -23,12 +23,6 @@ body {
     opacity: 0.75;
     z-index: -10;
 }
-.wrapper h1 {
-    font-size: 3em;
-    margin: 0.3em ;
-    text-align: center;
-    color: white;
-}
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -127,9 +121,24 @@ body {
 .popup button:hover {
     background-color: var(--dark-brown-hover);
 }
-h1:not(.wrapper h1) {
+
+hr {
+    border: 3px solid var(--dark-brown);
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+.wrapper h1 {
+    font-size: 3em;
+    margin: 0.3em ;
     text-align: center;
-    color: black;
+    color: white;
+}
+
+h1:not(.wrapper h1) {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 40px;
+    color: var(--dark-brown);
 }
 h2, h3, h4, h5 {
     color: black;
