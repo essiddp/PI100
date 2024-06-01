@@ -131,7 +131,11 @@ h1:not(.wrapper h1) {
     text-align: center;
     color: black;
 }
-h2, h3, h4, h5, strong {
+h2, h3, h4, h5 {
+    color: black;
+}
+strong {
+    font-size: 24px;
     color: black;
 }
 li, a {
@@ -156,8 +160,8 @@ p {
     margin-bottom: 20px;
 }
 .artwork img {
-    width: 50%;
-    height: auto;
+    width: auto;
+    height: 300px;
     margin-right: 20px;
     border-radius: 10px;
 }
