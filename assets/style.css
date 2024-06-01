@@ -6,7 +6,16 @@ body {
     background-color: #000000;
     color: white;
 }
-
+.blackBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.75;
+    z-index: -1;
+}
 .wrapper h1 {
     font-size: 3em;
     margin: 0.3em ;
