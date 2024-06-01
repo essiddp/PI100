@@ -321,3 +321,29 @@ figcaption{
         justify-content: center;
         font-size: large;
     }
+
+    .work {
+        margin-bottom: 20px;
+    }
+    
+    .work h2 {
+        color: var(--dark-brown);
+        font-size: 24px;
+    }
+    
+    .work p {
+        color: black;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+    
+    .work a {
+        color: var(--dark-brown);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .work a:hover {
+        color: var(--dark-brown-hover);
+    }
+    
