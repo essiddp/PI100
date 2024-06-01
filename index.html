@@ -6,34 +6,38 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <div class="fullscreen-bg">
-    <div class="wrapper">
-      <div class="overlayBG"></div>
-      <h1>Rizal as</h1>
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-link="child.html">a child</div>
-            <div class="carousel-item" data-link="student.html">a student</div>
-            <div class="carousel-item" data-link="artist.html">an artist</div>
-            <div class="carousel-item" data-link="musician.html">a musician</div>
-            <div class="carousel-item" data-link="lover.html">a lover</div>
-            <div class="carousel-item" data-link="poet.html">a poet</div>
-            <div class="carousel-item" data-link="hero.html">a hero</div>
+  <div class="homepage-section">
+    <div class="fullscreen-bg">
+      <div class="wrapper">
+        <div class="overlayBG"></div>
+        <h1>Rizal as</h1>
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-link="child.html">a child</div>
+              <div class="carousel-item" data-link="student.html">a student</div>
+              <div class="carousel-item" data-link="artist.html">an artist</div>
+              <div class="carousel-item" data-link="musician.html">a musician</div>
+              <div class="carousel-item" data-link="lover.html">a lover</div>
+              <div class="carousel-item" data-link="poet.html">a poet</div>
+              <div class="carousel-item" data-link="hero.html">a hero</div>
+            </div>
           </div>
+          <a class="prev" onclick="prevItem()">&#10094;</a>
+          <a class="next" onclick="nextItem()">&#10095;</a>
         </div>
-        <a class="prev" onclick="prevItem()">&#10094;</a>
-        <a class="next" onclick="nextItem()">&#10095;</a>
       </div>
     </div>
   </div>
 
-  <div class="black-section">
-        <p>Rizal is known for his many roles: our national hero, the author of "Noli Me Tangere" and "El Filibusterismo," and his image on the 1 peso coin. But behind these familiar tales lies a lesser-known side of his life.
-        This project aims to shed light on different aspects of Rizal's life, showcasing him as a member of his family, his experiences as a student, his journey in developing an interest in art through showcasing his artworks, his musical talents and compositions, his romantic relationships, his writings, and more. All of these aspects come together to demonstrate that Rizal was indeed a polymath.
-        By uncovering these lesser-known parts of Rizal's life, we hope that we have provided a more comprehensive understanding of him.</p>
+  <div class="about-section">
+    <div class="black-section">
+      <p>Rizal is known for his many roles: our national hero, the author of "Noli Me Tangere" and "El Filibusterismo," and his image on the 1 peso coin. But behind these familiar tales lies a lesser-known side of his life.
+      This project aims to shed light on different aspects of Rizal's life, showcasing him as a member of his family, his experiences as a student, his journey in developing an interest in art through showcasing his artworks, his musical talents and compositions, his romantic relationships, his writings, and more. All of these aspects come together to demonstrate that Rizal was indeed a polymath.
+      By uncovering these lesser-known parts of Rizal's life, we hope that we have provided a more comprehensive understanding of him.</p>
       <div class="rectangle">
-      <p>Alacon | Dela Peña | Lapuz | Ramos | Trinos </p>
+        <p>Alacon | Dela Peña | Lapuz | Ramos | Trinos </p>
+      </div>
     </div>
   </div>
 
@@ -113,7 +117,6 @@
     });
 
     items[currentItem].classList.add('active');
-    
   </script>
 
 </body>

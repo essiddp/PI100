@@ -8,7 +8,11 @@
     --cream: #f3eee4;
 }
 body {
+    background-image: url('longerbg.jpg');
     font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--black);
@@ -20,7 +24,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #110900;
-    opacity: 0.75;
+    opacity: 0.85;
     z-index: -10;
 }
 .wrapper {
@@ -211,23 +215,18 @@ figcaption{
     }
 }
     .fullscreen-bg {
-        width: 100%;
-        height: 100vh;
-        background-image: url('bg.jpg');
+        height: 300vh;
         background-repeat: no-repeat; /* Add this line */
         background-size: cover;
-        background-color: black;
         opacity: 90%;
         background-position: center;
         justify-content: center;
         align-items: center;
         color: var(--cream);
     }
-  
     .black-section {
         height: auto; /* Change height to auto */
         min-height: 100vh; /* Ensure section fills the viewport */
-        background-color: rgb(49, 21, 2);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -235,40 +234,11 @@ figcaption{
         padding: 20px;
         color: white;
         overflow-y: auto; /* Add overflow-y: auto */
+        position: relative; /* Add position relative */
+        background: transparent; /* Remove background color */
     }
     
-    .black-section p {
-        max-width: 80%; /* Adjust max-width for better readability */
-        font-size: 1.2em;
-        text-align: center;
-        line-height: 30px;
-        color: var(--cream);
-        margin-top: 20px; /* Reduce margin-top for better spacing */
-        z-index: 1;
-    }
-
-      .rectangle {
-        margin-top: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 70px;
-        background-color: var(--cream);
-        opacity: 80%;
-        z-index: 1;
-        width: 35%;
-        padding: 5px; /* Added padding */
-    }
-
-    .rectangle p {
-        margin: 0; /* Remove default margin */
-        color: var(--black);
-        z-index: 1;
-        text-align: center;
-        justify-content: center;
-        font-size: small;
-    }
-
+    
     .artwork-container {
         display: flex;
         flex-direction: column;
@@ -300,7 +270,7 @@ figcaption{
         text-align: center;
         margin-bottom: 0;
     }
-
+    
     .artwork-container strong {
         color: var(--dark-brown);
         text-transform: uppercase;
@@ -308,4 +278,46 @@ figcaption{
         text-align: justify;
     }
     
+    /* Your existing CSS styles here */
+
+    /* Adjustments for homepage section */
+    .homepage-section {
+        height: 100vh; /* Adjust to fit viewport */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    /* Adjustments for about section */
+    .about-section {
+        height: auto; /* Adjust to fit content */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .about-section p {
+        font-size: 20px;
+        color: white;
+        line-height: 35px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .rectangle {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 70px;
+        background-color: var(--cream);
+        opacity: 80%;
+        z-index: 1;
+        width: 35%;
+        padding: 10px; /* Added padding */
+    }
     
+    .rectangle p {
+        margin: 0; /* Remove default margin */
+        color: var(--black);
+        z-index: 1;
+        text-align: center;
+        justify-content: center;
+        font-size: large;
+    }
